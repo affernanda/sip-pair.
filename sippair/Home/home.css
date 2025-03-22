@@ -1,0 +1,54 @@
+.titulo {
+    padding: 2%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: translateX(-50%);
+    font-size: 200%;
+}
+
+.titulo a {
+    text-decoration:none;
+    color: white;
+}
+
+
+.header {
+    padding: 2%;
+    align-self: center;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    font-size: 120%;
+}
+
+
+.header a {
+    text-decoration:none;
+    color: white;
+}
+
+.Perfil{
+    padding: 2%;
+    align-self: right;
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    transform: translateX(-50%);
+    font-size: 150%;
+}
+
+.Perfil a{
+    text-decoration:none;
+    color: white;
+}
+
