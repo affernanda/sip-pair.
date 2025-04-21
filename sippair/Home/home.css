@@ -1,3 +1,11 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+
 .titulo {
     padding: 2%;
     align-self: center;
@@ -11,7 +19,7 @@
 }
 
 .titulo a {
-    text-decoration:none;
+    text-decoration: none;
     color: white;
 }
 
@@ -31,11 +39,11 @@
 
 
 .header a {
-    text-decoration:none;
+    text-decoration: none;
     color: white;
 }
 
-.Perfil{
+.Perfil {
     padding: 2%;
     align-self: right;
     display: flex;
@@ -47,8 +55,171 @@
     font-size: 150%;
 }
 
-.Perfil a{
-    text-decoration:none;
+.Perfil a {
+    text-decoration: none;
     color: white;
 }
 
+
+main {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    padding: 20%;
+    flex: 1;
+}
+
+
+.main p {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+
+.par-ideal {
+    padding: 40px;
+}
+
+.par-ideal h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.categoria {
+    margin-bottom: 40px;
+}
+
+.titulo-categoria {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.titulo-categoria h3,
+.titulo-categoria a {
+    color: #fff;
+}
+
+.carrossel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+}
+
+.card {
+    min-width: 150px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.card h4 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+.newsletter {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 2rem;
+    text-align: center;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.newsletter-text {
+    flex: 1;
+    text-align: left;
+}
+
+.newsletter-img {
+    flex: 1;
+    background-color: #333;
+}
+
+.newsletter-login {
+    background-color: #3e423d;
+    padding: 1rem;
+    color: white;
+}
+
+.newsletter-login button {
+    padding: 0.5rem 1rem;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.top-em-alta {
+    color: rgb(255, 255, 255);
+    padding: 2%;
+    text-align: center;
+}
+
+.top3 {
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    gap: 1%;
+    margin-top: 1%;
+    flex-wrap: wrap;
+}
+
+.top-card {
+    background-color: #f2f2f2;
+    padding: 1rem;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.top-card .circle {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    margin: 0 auto 1rem;
+}
+
+.footer {
+    all: unset;
+    width: 100%;
+    background-color: #D9D9D9;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+}
+
+.titulofooter a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 200%;
+}
