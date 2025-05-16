@@ -2,7 +2,7 @@ package JavaBeans;
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException; 
+import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -20,12 +20,12 @@ public class ClasseMaeBD {
 
     public ClasseMaeBD() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver"); 
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(servidor, usuario, senha);
 
             this.criarBanco();
 
-            statusSQL = null; 
+            statusSQL = null;
         } catch (ClassNotFoundException ex) {
             statusSQL = "Driver JDBC não encontrado! " + ex.getMessage();
         } catch (SQLException ex) {
@@ -44,29 +44,38 @@ public class ClasseMaeBD {
             ps.executeUpdate();
 
             sql = "create table if not exists usuario ( "
-                    + "pkuser int AUTO_INCREMENT,"
+                    + "pkuser int not null auto_increment,"
                     + "email varchar(40) not null,"
                     + "senha varchar(20) not null,"
                     + "nome varchar(40) not null,"
                     + "idade varchar(5) not null,"
-                    + "notas int(5),"
-                    + "comentarios varchar(400)"
-                    + "PRIMARY KEY (pkuser)) ";
+                    + "PRIMARY KEY (pkuser))";
             ps = con.prepareStatement(sql);
             ps.executeUpdate();
-            
+
             sql = "create table if not exists postagens ( "
-                    + "pkpost int AUTO_INCREMENT,"
-            		+ "pkuser int not null,"
-                    + "titulo varchar(40) not null,"
-                    + "conteudo varchar(20) not null,"
-                    + "dt_post date,"
-                    + "comentarios varchar(400) not null,"
-                    + "PRIMARY KEY (pkuser)) "
-                    + "CONSTRAINT fk_publicacoes_user FOREIGN KEY (pkuser) REFERENCES usuario(pkuser) )";
+                    + "pkpost int not null auto_increment, "
+                    + "pkuser int not null, "
+                    + "titulo varchar(40) not null, "
+                    + "conteudo varchar(20) not null, "
+                    + "dt_post date, "
+                    + "comentarios varchar(400) not null, "
+                    + "PRIMARY KEY (pkpost), "
+                    + "CONSTRAINT fk_publicacoes_user FOREIGN KEY (pkuser) REFERENCES usuario(pkuser))";
             ps = con.prepareStatement(sql);
             ps.executeUpdate();
             
+            sql = "create table if not exists reviews ("
+                    + "pkreview int not null auto_increment, "
+                    + "pkuser int not null, "
+                    + "nota varchar(5) not null, "
+                    + "comentario varchar(400) not null, "
+                    + "PRIMARY KEY (pkreview),"
+                    + "CONSTRAINT fk_reviews_user FOREIGN KEY (pkuser) REFERENCES usuario(pkuser))";
+            
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+
         } catch (SQLException err) {
             statusSQL = "Erro ao executar SQL " + err.getMessage();
         }

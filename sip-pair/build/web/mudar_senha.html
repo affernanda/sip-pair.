@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Recuperar Senha – Sip and Pair</title>
+        <link rel="stylesheet" href="css/login_register_forgot.css" />
+    </head>
+    <body>
+    <body class="forgot-page">
+        <div class="card-wrapper">
+            <div class="form-container">
+                <h2>Recuperar Senha</h2>
+                <p>Digite seu email para receber o link de recuperação:</p>
+                <form action="jsp/nova_senha.jsp" name="formsenha" method="post" onsubmit="return conferirSenha()">
+                    <input type="password" placeholder="Nova senha" name="senha" required />
+                    <input type="password" placeholder="Confirmar senha" name="confirmar_senha" required/>
+                    <button type="submit" class="btn-send-link">Enviar link</button>
+                </form>
+                <small><a href="login.html" class="forgot-link">Voltar ao login</a></small>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="footer-englobamento">
+            <div class="titulo-footer">
+                <a href="home.html">sip & pair.</a>
+            </div>
+
+            <div class="footer">
+                <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loremipsum@outlook.com.br</p>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+        function conferirSenha(){
+        const senha1 = document.forms["formsenha"]["senha"].value;
+        const senha2 = document.forms["formsenha"]["confirmar_senha"].value;
+        
+        if (senha1 !== senha2){
+            alert('As senhas devem ser iguais.');
+            return false;
+        }
+        return true;
+    }
+    </script>
+</html>

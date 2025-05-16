@@ -16,7 +16,7 @@ public class Usuario extends ClasseMaeBD {
     public boolean checarLogin() {
         try {
             sql = "select * from usuario where email = ? and senha = ?";
-            ps = con.prepareStatement(sql); 
+            ps = con.prepareStatement(sql);
             ps.setString(1, email);
             ps.setString(2, senha);
             tab = ps.executeQuery();
@@ -26,28 +26,43 @@ public class Usuario extends ClasseMaeBD {
                 this.senha = tab.getString("senha");
                 this.nome = tab.getString("nome");
                 this.idade = tab.getString("idade");
-                this.notas = tab.getInt("notas");
-                this.comentarios = tab.getString("comentarios");
                 return true;
             }
-            this.statusSQL = null; 
+            this.statusSQL = null;
         } catch (SQLException ex) {
             this.statusSQL = "Erro ao tentar buscar Usuário! Tente novamente! " + ex.getMessage();
         }
         return false;
     }
 
+    public boolean checarEmail() {
+        try {
+            sql = "select * from usuario where email = ?";
+            ps = con.prepareStatement(sql);
+            ps.setString(1, email);
+            tab = ps.executeQuery();
+            if (tab.next()) {
+                this.pkuser = tab.getInt("pkuser");
+                this.email = tab.getString("email");
+                this.nome = tab.getString("nome");
+                this.idade = tab.getString("idade");
+                return true;
+            }
+            this.statusSQL = null;
+        } catch (SQLException ex) {
+            this.statusSQL = "Erro ao tentar buscar o email! Tente novamente! " + ex.getMessage();
+        }
+        return false;
+    }
+
     public void incluir() {
         try {
-            sql = "insert into usuarios (pkuser, email, senha, nome, idade, notas, comentarios) " + "values (?,?,?,?,?,0,0) ";
+            sql = "insert into usuario (email, senha, nome, idade) " + "values (?,?,?,?) ";
             ps = con.prepareStatement(sql);
-            ps.setInt(1, pkuser);
-            ps.setString(2, email);
-            ps.setString(3, senha);
-            ps.setString(4, nome);
-            ps.setString(5, idade);
-            ps.setInt(6, notas);
-            ps.setString(7, comentarios);
+            ps.setString(1, email);
+            ps.setString(2, senha);
+            ps.setString(3, nome);
+            ps.setString(4, idade);
             ps.executeUpdate();
             this.statusSQL = null;
         } catch (SQLException ex) {
@@ -56,7 +71,7 @@ public class Usuario extends ClasseMaeBD {
     }
 
     public boolean atualizarDados() {
-        sql = "UPDATE usuarios SET ";
+        sql = "UPDATE usuario SET ";
         boolean hasField = false;
 
         if (this.email != null) {
@@ -75,13 +90,6 @@ public class Usuario extends ClasseMaeBD {
             sql += "idade = ?,";
             hasField = true;
         }
-        if (this.notas != null) {
-        	sql += "notas = ?, ";
-        	hasField = true;
-        }
-        if (this.comentarios != null) {
-        	sql += "comentarios = ? ";
-        }
 
         sql = sql.trim();
         if (sql.endsWith(",")) {
@@ -91,10 +99,10 @@ public class Usuario extends ClasseMaeBD {
         sql += " WHERE pkuser = ?";
 
         if (!hasField) {
-            return false; 
+            return false;
         }
 
-        try (PreparedStatement ps= con.prepareStatement(sql)) {
+        try (PreparedStatement ps = con.prepareStatement(sql)) {
             int index = 1;
             if (this.email != null) {
                 ps.setString(index++, this.email);
@@ -108,12 +116,7 @@ public class Usuario extends ClasseMaeBD {
             if (this.idade != null) {
                 ps.setString(index++, this.idade);
             }
-            if (this.notas != null) {
-            	ps.setInt(index++, this.notas);
-            }
-            if(this.comentarios != null) {
-            	ps.setString(index++, this.comentarios);
-            }
+
             ps.setInt(index, this.pkuser);
 
             return ps.executeUpdate() > 0;
@@ -125,7 +128,7 @@ public class Usuario extends ClasseMaeBD {
 
     public void deletar() {
         try {
-            sql = "delete from usuarios where ucase(trim(pkuser)) = ucase(trim(?))";
+            sql = "delete from usuario where ucase(trim(pkuser)) = ucase(trim(?))";
             ps = con.prepareStatement(sql);
             ps.setInt(1, this.pkuser);
             ps.executeUpdate();

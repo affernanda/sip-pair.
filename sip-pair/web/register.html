@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Sip and Pair</title>
+  <link rel="stylesheet" href="css/login_register_forgot.css"/>
+</head>
+<body>
+  <div class="card-wrapper">
+  <div class="form-container">
+    <h2>Cadastro</h2>
+    <form action="jsp/cadastro.jsp" name="formcadastro" method="post" onsubmit="return conferirSenha()">
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="password" placeholder="Senha" name="senha" required />
+      <input type="password" placeholder="Confirmar Senha" name="confirmar_senha" required />
+      <input type="text" placeholder="Usuário" name="usuario" required />
+      <input type="text" placeholder="Idade" name="idade" required />
+      <button type="submit">Cadastrar</button>
+      <a href="login.html">Já tem conta? Faça login</a>
+    </form>
+  </div>
+</body>
+<footer>
+  <div class="footer-englobamento">
+      <div class="titulo-footer">
+          <a href="index.html">sip & pair.</a>
+      </div>
+
+      <div class="footer">
+          <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loremipsum@outlook.com.br</p>
+      </div>
+
+  </div>
+</footer>
+<script>
+    function conferirSenha(){
+        const senha1 = document.forms["formcadastro"]["senha"].value;
+        const senha2 = document.forms["formcadastro"]["confirmar_senha"].value;
+        
+        if (senha1 !== senha2){
+            alert('As senhas devem ser iguais.');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+</html>
