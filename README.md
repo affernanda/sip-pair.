@@ -12,16 +12,15 @@
 - PROTÓTIPOS:
   - Homepage:
   
-  ![image](https://github.com/user-attachments/assets/909c73a0-c548-42bd-a34e-0aa94c841a05)
-  ![image](https://github.com/user-attachments/assets/88a07898-18fd-4198-a211-07613700e6e7)
+  ![image]([https://github.com/user-attachments/assets/909c73a0-c548-42bd-a34e-0aa94c841a05](https://github.com/affernanda/sip-pair./blob/4625a046b774a7050849277ec2a836ed597cfc79/Prototipos/Homepage/HomePage.png))
 
   - Página de item:
  
-  ![image](https://github.com/user-attachments/assets/87fe7600-d2ea-4933-9bd1-c0ce7071f947)
+  ![image]([https://github.com/user-attachments/assets/87fe7600-d2ea-4933-9bd1-c0ce7071f947](https://github.com/affernanda/sip-pair./blob/4625a046b774a7050849277ec2a836ed597cfc79/Prototipos/Pagina%20de%20Item/PAGINA%20ITEM.png))
 
   - Perfil:
 
- ![image](https://github.com/user-attachments/assets/759cb867-15bf-41b9-b862-36a162ac6b0c)
+ ![image]([https://github.com/user-attachments/assets/759cb867-15bf-41b9-b862-36a162ac6b0c](https://github.com/affernanda/sip-pair./blob/4625a046b774a7050849277ec2a836ed597cfc79/Prototipos/Perfil/PERFIL.png))
 
   - Cadastro:
 
@@ -30,19 +29,3 @@
   - Login:
 
   ![image](https://github.com/user-attachments/assets/514f3d9b-ff86-47ca-8b20-0a10c13529f7)
-
-  - História:
-
-    1.1 História do café:
-  
-    ![image](https://github.com/user-attachments/assets/0d4cfd0c-244d-464a-9e5f-fa43e2ef22f5)
-
-    ![image](https://github.com/user-attachments/assets/07bf71d5-ac13-4183-8815-e3a0b6fce1e6)
-
-    1.2 História do chá:
-
-    ![image](https://github.com/user-attachments/assets/fa3801da-a51d-4f14-82e6-8cb86c3e3887)
-
-    1.3 História do vinho:
-
-    ![image](https://github.com/user-attachments/assets/a601071a-3953-422a-baa9-a2f58f0efa94)
