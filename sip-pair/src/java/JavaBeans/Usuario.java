@@ -2,6 +2,10 @@ package JavaBeans;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Usuario extends ClasseMaeBD {
 
@@ -10,8 +14,6 @@ public class Usuario extends ClasseMaeBD {
     public String senha;
     public String nome;
     public String idade;
-    public Integer notas;
-    public String comentarios;
 
     public boolean checarLogin() {
         try {
@@ -57,16 +59,26 @@ public class Usuario extends ClasseMaeBD {
 
     public void incluir() {
         try {
-            sql = "insert into usuario (email, senha, nome, idade) " + "values (?,?,?,?) ";
-            ps = con.prepareStatement(sql);
+            sql = "INSERT INTO usuario (email, senha, nome, idade) VALUES (?, ?, ?, ?)";
+            ps = con.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS); // <- ESSENCIAL
             ps.setString(1, email);
             ps.setString(2, senha);
             ps.setString(3, nome);
             ps.setString(4, idade);
-            ps.executeUpdate();
-            this.statusSQL = null;
-        } catch (SQLException ex) {
-            this.statusSQL = "Erro ao incluir usuario! Tente novamente mais tarde! <br> " + ex.getMessage();
+
+            int rowsAffected = ps.executeUpdate(); // <- Confirma se inseriu
+
+            if (rowsAffected > 0) {
+                ResultSet generatedKeys = ps.getGeneratedKeys();
+                if (generatedKeys.next()) {
+                    this.pkuser = generatedKeys.getInt(1); // <- Captura o pkuser
+                }
+            } else {
+                this.statusSQL = "Nenhuma linha foi inserida.";
+            }
+
+        } catch (SQLException e) {
+            this.statusSQL = "Erro ao inserir usuário: " + e.getMessage();
         }
     }
 
@@ -138,4 +150,26 @@ public class Usuario extends ClasseMaeBD {
                     + ex.getMessage();
         }
     }
+
+    public List<Review> listarTodosReviews() {
+        List<Review> lista = new ArrayList<>();
+        try {
+            ClasseMaeBD bd = new ClasseMaeBD();
+            bd.sql = "SELECT r.comentario, r.nota, u.nome FROM reviews r JOIN usuario u ON r.pkuser = u.pkuser";
+            bd.ps = bd.con.prepareStatement(bd.sql);
+            bd.tab = bd.ps.executeQuery();
+
+            while (bd.tab.next()) {
+                Review c = new Review();
+                c.comentario = bd.tab.getString("comentario");
+                c.nota = bd.tab.getString("nota");
+                c.nomeUsuario = bd.tab.getString("nome");
+                lista.add(c);
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao listar reviews: " + e.getMessage());
+        }
+        return lista;
+    }
+
 }

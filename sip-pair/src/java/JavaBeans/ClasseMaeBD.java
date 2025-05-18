@@ -52,22 +52,11 @@ public class ClasseMaeBD {
                     + "PRIMARY KEY (pkuser))";
             ps = con.prepareStatement(sql);
             ps.executeUpdate();
-
-            sql = "create table if not exists postagens ( "
-                    + "pkpost int not null auto_increment, "
-                    + "pkuser int not null, "
-                    + "titulo varchar(40) not null, "
-                    + "conteudo varchar(20) not null, "
-                    + "dt_post date, "
-                    + "comentarios varchar(400) not null, "
-                    + "PRIMARY KEY (pkpost), "
-                    + "CONSTRAINT fk_publicacoes_user FOREIGN KEY (pkuser) REFERENCES usuario(pkuser))";
-            ps = con.prepareStatement(sql);
-            ps.executeUpdate();
             
             sql = "create table if not exists reviews ("
                     + "pkreview int not null auto_increment, "
                     + "pkuser int not null, "
+                    + "titulo varchar(40) not null, "
                     + "nota varchar(5) not null, "
                     + "comentario varchar(400) not null, "
                     + "PRIMARY KEY (pkreview),"
@@ -75,7 +64,17 @@ public class ClasseMaeBD {
             
             ps = con.prepareStatement(sql);
             ps.executeUpdate();
-
+            
+            sql = "create table if not exists favoritos ("
+                    + "pkfav int not null auto_increment, "
+                    + "pkuser int not null, "
+                    + "imagem varchar(400) not null, "
+                    + "PRIMARY KEY (pkfav), "
+                    + "CONSTRAINT fk_favoritos_user FOREIGN KEY (pkuser) REFERENCES usuario(pkuser))";
+            
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+                    
         } catch (SQLException err) {
             statusSQL = "Erro ao executar SQL " + err.getMessage();
         }

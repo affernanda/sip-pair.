@@ -14,6 +14,7 @@
         session.setAttribute("nome", user.nome);
         session.setAttribute("email", user.email);
         session.setAttribute("pkuser", user.pkuser);
+        session.setAttribute("idade", user.idade);
 
         response.sendRedirect(request.getContextPath() + "/index_logado.html");
     } else {
