@@ -1,67 +1,73 @@
-/*
-    Header
-*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: black;
-    margin: 0;
-}
-
-.titulo {
-    padding: 2%;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 10%;
-    transform: translateX(-50%);
-    font-size: 200%;
-}
-
-.titulo a {
-    text-decoration: none;
-    color: white;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #141414;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.7;
+  padding: 1.5rem 0;
 }
 
 
-.header {
-    padding: 2%;
-    align-self: center;
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-    font-size: 120%;
+.topbar {
+  max-width: 1000px;
+  width: 90%;
+  margin: 1rem auto 2.5rem auto;
+  padding: 1rem 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-
-.header a {
-    text-decoration: none;
-    color: white;
+.topbar .logo {
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: #fff;
+  text-decoration: none;
 }
 
-.Perfil {
-    padding: 2%;
-    align-self: right;
-    display: flex;
-    justify-content: right;
-    position: absolute;
-    top: 0;
-    right: 10%;
-    transform: translateX(-50%);
-    font-size: 150%;
+.menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2.5rem;
 }
 
-.Perfil a {
-    text-decoration: none;
-    color: white;
+.menu a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  border-bottom-color: #a4633b;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
 }
 
 

@@ -31,22 +31,17 @@
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     </head>
     <body>
+    <header class="topbar">
+      <a href="../index_logado.html" class="logo">sip & pair.</a>
 
-        <!-- Header -->
-        <div class="header-agrupamento">
-            <div class="titulo">
-                <a href="../index_logado.html">sip & pair.</a>
-            </div>
+      <nav class="menu">
+        <a href="../sobre_logado.html" class="active">Sobre Nós</a>
+      </nav>
 
-            <div class="header">
-                <a href="../sobre_logado.html">Sobre Nós</a>
-            </div>
-
-            <div class="Perfil">
-                <a href="logout.jsp">Logout</a>
-            </div>
-        </div>
-
+      <a href="perfil.jsp" class="profile-link">
+        Perfil
+      </a>
+    </header>
         <main>
             <!-- Perfil -->
             <div class="perfil">
@@ -105,7 +100,7 @@
         <footer>
             <div class="footer-englobamento">
                 <div class="titulo-footer">
-                    <a href="../home/home_logado.html">sip & pair.</a>
+                    <a href="../index_logado.html">sip & pair.</a>
                 </div>
                 <div class="footer">
                     <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loremipsum@outlook.com.br</p>

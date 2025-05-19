@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - Sip and Pair</title>
-  <link rel="stylesheet" href="css/login_register_forgot.css"/>
+  <link rel="stylesheet" href="css/login_register_forgot.css" />
 </head>
+
 <body>
-  <div class="card-wrapper">
-    <div class="form-container">
-      <h2>Login</h2>
-      <form action="jsp/login.jsp" name="formlogin" method="post">
-        <input type="email" placeholder="email" name="email" required />
-        <input type="password" placeholder="senha" name="senha" required />
-        <small>
-          <a href="forgot.html" class="forgot-link">Esqueci minha senha</a>
-        </small>
-        <button type="submit">Entrar</button>
-        <a href="register.html">Não tem conta? Cadastre-se</a>
-      </form>
+      <header class="topbar">
+      <a href="index.html" class="logo">sip & pair.</a>
+
+      <nav class="menu">
+        <a href="sobre.html" class="active">Sobre Nós</a>
+      </nav>
+
+      <a href="login.html" class="profile-link">
+        Perfil
+      </a>
+    </header>
+<main>
+  <div class="page-container">
+    <div class="card-wrapper">
+      <div class="form-container">
+        <h2>Login</h2>
+        <form action="jsp/login.jsp" name="formlogin" method="post">
+          <input type="email" placeholder="email" name="email" required />
+          <input type="password" placeholder="senha" name="senha" required />
+          <small>
+            <a href="forgot.html" class="forgot-link">Esqueci minha senha</a>
+          </small>
+          <button type="submit">Entrar</button>
+          <a href="register.html">Não tem conta? Cadastre-se</a>
+        </form>
+      </div>
     </div>
+  </main>
+      <footer>
+      <div class="footer-englobamento">
+        <div class="titulo-footer">
+          <a href="index.html">sip & pair.</a>
+        </div>
+        <div class="footer">
+          <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sac@sipandpair.com.br</p>
+        </div>
+    </footer>
   </div>
 </body>
-<footer>
-  <div class="footer-englobamento">
-      <div class="titulo-footer">
-          <a href="index.html">sip & pair.</a>
-      </div>
-      <div class="footer">
-          <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loremipsum@outlook.com.br</p>
-      </div>
-  </div>
-</footer>
+
 </html>

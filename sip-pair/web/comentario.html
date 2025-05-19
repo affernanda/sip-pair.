@@ -12,17 +12,17 @@
     </head>
 
     <body>
-        <div class="titulo">
-            <a href="index_logado.html">sip & pair.</a>
-        </div>
+        <header class="topbar">
+            <a href="index_logado.html" class="logo">sip & pair.</a>
 
-        <div class="header">
-            <a href="sobre_logado.html">Sobre Nós</a>
-        </div>
-        <div class="Perfil">
-            <a href="perfil.html">Perfil</a>
-        </div>
+            <nav class="menu">
+                <a href="sobre_logado.html" class="active">Sobre Nós</a>
+            </nav>
 
+            <a href="jsp/perfil.jsp" class="profile-link">
+                Perfil
+            </a>
+        </header>
         <main class="comentario-container">
             <form action="jsp/comentario.jsp" name="formcomen" onsubmit="return checarNota()">
                 <input type="text" placeholder="Titulo" name="titulo" required />
@@ -31,19 +31,19 @@
                 <button type="submit">Comentar</button>
             </form>
         </main>
+
+        <footer>
+            <div class="footer-englobamento">
+                <div class="titulo-footer">
+                    <a href="index_logado.html">sip & pair.</a>
+                </div>
+
+                <div class="footer">
+                    <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loremipsum@outlook.com.br</p>
+                </div>
+            </div>
+        </footer>
     </body>
-    <footer>
-        <div class="footer-englobamento">
-            <div class="titulo-footer">
-                <a href="index.html">sip & pair.</a>
-            </div>
-
-            <div class="footer">
-                <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loremipsum@outlook.com.br</p>
-            </div>
-
-        </div>
-    </footer>
     <script>
         function checarNota() {
             const nota = document.forms["formcomen"]["nota"].value;

@@ -16,17 +16,17 @@
     <title>sip&pair</title>
 </head>
 <body>
-    <div class="titulo">
-        <a href="../index_logado.html">sip & pair.</a>
-    </div>
+    <header class="topbar">
+      <a href="../index_logado.html" class="logo">sip & pair.</a>
 
-    <div class="header">
-        <a href="../sobre_logado.html">Sobre Nós</a>
-    </div>
-    <div class="Perfil">
-        <a href="perfil.jsp">Perfil</a> 
-    </div>
+      <nav class="menu">
+        <a href="../sobre_logado.html" class="active">Sobre Nós</a>
+      </nav>
 
+      <a href="perfil.jsp" class="profile-link">
+        Perfil
+      </a>
+    </header>
     <main>
         <section class="carousel">
             <button class="carousel-btn prev">❮</button>
@@ -73,7 +73,7 @@
         <section class="comentarios">
             <h3>Comentários</h3>
             <div class="criar-publicacao">
-                <a href="../   comentario.html">Criar comentário</a>
+                <a href="../comentario.html">Criar comentário</a>
             </div>
             <ul class="comentarios-lista">
                 <% for (Review r : reviews) { %>
@@ -99,7 +99,7 @@
     <footer>
         <div class="footer-englobamento">
             <div class="titulo-footer">
-                <a href="index_logado.html">sip & pair.</a>
+                <a href="../index_logado.html">sip & pair.</a>
             </div>
             <div class="footer">
                 <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loremipsum@outlook.com.br</p>
@@ -107,5 +107,5 @@
         </div>
     </footer>
 </body>
-<script src="js/carrossel.js" defer></script>
+<script src="../js/carrossel.js" defer></script>
 </html>
