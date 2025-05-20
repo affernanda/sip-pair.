@@ -119,6 +119,10 @@ main {
   color: white;
 }
 
+.carousel-text a {
+    text-decoration: none;
+}
+
 .badge {
   display: inline-block;
   background-color: #8b5c2c;
