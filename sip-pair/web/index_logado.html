@@ -1,259 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/index.css" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
-    <title>sip&pair</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/index.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+        <title>sip&pair</title>
+    </head>
 
-<body>
-    <header class="topbar">
-        <a href="index_logado.html" class="logo">sip & pair.</a>
+    <body>
+        <header class="topbar">
+            <a href="index_logado.html" class="logo">sip & pair.</a>
 
-        <nav class="menu">
-            <a href="sobre_logado.html" class="active">Sobre Nós</a>
-        </nav>
+            <nav class="menu">
+                <a href="sobre_logado.html" class="active">Sobre Nós</a>
+            </nav>
 
-        <a href="jsp/perfil.jsp" class="profile-link">
-            Perfil
-        </a>
-    </header>
+            <a href="jsp/perfil.jsp" class="profile-link">
+                Perfil
+            </a>
+        </header>
+        <main>
+            <section>
+                <p>life is short<br />have a sip</p>
+            </section>
 
-    <main>
-        <section>
-            <p>life is short<br />have a sip</p>
-        </section>
+            <section class="par-ideal">
+                <h2>Ache seu par ideal:</h2>
 
-        <section class="par-ideal">
-            <h2>Ache seu par ideal:</h2>
+                <div class="categoria">
+                    <div class="titulo-categoria">
+                        <h3>Cafés</h3>
+                    </div>
+                    <div class="carrossel" id="cafes">
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/Espresso.jpg" alt="Espresso Italiano" />
+                                <h4>Espresso Italiano</h4>
+                                <p>Café forte e encorpado, com notas intensas de chocolate amargo e um leve toque cítrico.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/cold-brew.jpg" alt="Cold Brew" />
+                                <h4>Cold Brew</h4>
+                                <p>Extraído a frio por 12 horas, resulta em uma bebida suave, adocicada e com baixa acidez.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/capuccino.jpg" alt="Capuccino Clássico" />
+                                <h4>Capuccino Clássico</h4>
+                                <p>Equilíbrio perfeito entre café espresso, leite vaporizado e espuma cremosa.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/etiopesidamo.jpg" alt="Café Etíope Sidamo" />
+                                <h4>Café Etíope Sidamo</h4>
+                                <p>Café de origem africana com sabor floral e notas frutadas de frutas vermelhas e bergamota.</p>
+                            </div>
+                        </a>
 
-            <div class="categoria">
-                <div class="titulo-categoria">
-                    <h3>Cafés</h3>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/Mocha.jpg" alt="Mocha Belga" />
+                                <h4>Mocha Belga</h4>
+                                <p>Combinação perfeita de café espresso com chocolate amargo e um toque de creme fresco.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/FlatWhite.jpg" alt="Flat White Australiano" />
+                                <h4>Flat White Australiano</h4>
+                                <p>Bebida cremosa feita com espresso e leite vaporizado, ideal para quem gosta de suavidade e sabor intenso.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="carrossel" id="cafes">
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/Espresso.jpg" alt="Espresso Italiano" />
-                            <h4>Espresso Italiano</h4>
-                            <p>Café forte e encorpado, com notas intensas de chocolate amargo e um leve toque cítrico.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/cold-brew.jpg" alt="Cold Brew" />
-                            <h4>Cold Brew</h4>
-                            <p>Extraído a frio por 12 horas, resulta em uma bebida suave, adocicada e com baixa acidez.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/capuccino.jpg" alt="Capuccino Clássico" />
-                            <h4>Capuccino Clássico</h4>
-                            <p>Equilíbrio perfeito entre café espresso, leite vaporizado e espuma cremosa.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/etiopesidamo.jpg" alt="Café Etíope Sidamo" />
-                            <h4>Café Etíope Sidamo</h4>
-                            <p>Café de origem africana com sabor floral e notas frutadas de frutas vermelhas e bergamota.</p>
-                        </div>
-                    </a>
 
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/Mocha.jpg" alt="Mocha Belga" />
-                            <h4>Mocha Belga</h4>
-                            <p>Combinação perfeita de café espresso com chocolate amargo e um toque de creme fresco.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/FlatWhite.jpg" alt="Flat White Australiano" />
-                            <h4>Flat White Australiano</h4>
-                            <p>Bebida cremosa feita com espresso e leite vaporizado, ideal para quem gosta de suavidade e sabor intenso.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+                <div class="categoria">
+                    <div class="titulo-categoria">
+                        <h3>Chás</h3>
+                    </div>
+                    <div class="carrossel" id="chas">
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/cha-verde.jpg" alt="Chá Verde Japonês Sencha" />
+                                <h4>Chá Verde Japonês Sencha</h4>
+                                <p>Refrescante e herbáceo, rico em antioxidantes e com sabor vegetal marcante.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/camomila.jpg" alt="Chá de Camomila" />
+                                <h4>Chá de Camomila</h4>
+                                <p>Calmante natural, com sabor suave e levemente adocicado, ideal para relaxar.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/cha-preto.jpg" alt="Chá Preto Darjeeling" />
+                                <h4>Chá Preto Darjeeling</h4>
+                                <p>O "champanhe dos chás", possui notas florais e frutadas com leve adstringência.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/Cha-de-hibisco.jpg" alt="Chá de Hibisco" />
+                                <h4>Chá de Hibisco</h4>
+                                <p>Bebida vibrante e azedinha, rica em vitamina C, ótima para consumo gelado.</p>
+                            </div>
+                        </a>
 
-            <div class="categoria">
-                <div class="titulo-categoria">
-                    <h3>Chás</h3>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/oolong.jpg" alt="Chá Oolong Taiwanês" />
+                                <h4>Chá Oolong Taiwanês</h4>
+                                <p>Meio fermentado, com aroma floral e sabor entre o verde e o preto, perfeito para apreciar lentamente.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/ervadoce.jpg" alt="Chá de Erva-Doce" />
+                                <h4>Chá de Erva-Doce</h4>
+                                <p>Sabor adocicado e refrescante, conhecido por suas propriedades digestivas e efeito calmante.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="carrossel" id="chas">
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/cha-verde.jpg" alt="Chá Verde Japonês Sencha" />
-                            <h4>Chá Verde Japonês Sencha</h4>
-                            <p>Refrescante e herbáceo, rico em antioxidantes e com sabor vegetal marcante.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/camomila.jpg" alt="Chá de Camomila" />
-                            <h4>Chá de Camomila</h4>
-                            <p>Calmante natural, com sabor suave e levemente adocicado, ideal para relaxar.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/cha-preto.jpg" alt="Chá Preto Darjeeling" />
-                            <h4>Chá Preto Darjeeling</h4>
-                            <p>O "champanhe dos chás", possui notas florais e frutadas com leve adstringência.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/Cha-de-hibisco.jpg" alt="Chá de Hibisco" />
-                            <h4>Chá de Hibisco</h4>
-                            <p>Bebida vibrante e azedinha, rica em vitamina C, ótima para consumo gelado.</p>
-                        </div>
-                    </a>
 
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/oolong.jpg" alt="Chá Oolong Taiwanês" />
-                            <h4>Chá Oolong Taiwanês</h4>
-                            <p>Meio fermentado, com aroma floral e sabor entre o verde e o preto, perfeito para apreciar lentamente.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/ervadoce.jpg" alt="Chá de Erva-Doce" />
-                            <h4>Chá de Erva-Doce</h4>
-                            <p>Sabor adocicado e refrescante, conhecido por suas propriedades digestivas e efeito calmante.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+                <div class="categoria">
+                    <div class="titulo-categoria">
+                        <h3>Vinhos</h3>
+                    </div>
+                    <div class="carrossel" id="vinhos">
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/carbernet.jpg" alt="Cabernet Sauvignon" />
+                                <h4>Cabernet Sauvignon</h4>
+                                <p>Vinho tinto encorpado com aromas de frutas negras, pimenta e notas de carvalho.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/blanc.jpg" alt="Sauvignon Blanc" />
+                                <h4>Sauvignon Blanc</h4>
+                                <p>Vinho branco refrescante, com notas cítricas, herbáceas e leve mineralidade.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/MalbecArgentino.jpg" alt="Malbec Argentino" />
+                                <h4>Malbec Argentino</h4>
+                                <p>Potente e frutado, com destaque para ameixa, violeta e taninos macios.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/rose.jpg" alt="Rosé Provence" />
+                                <h4>Rosé Provence</h4>
+                                <p>Elegante e seco, com notas de morango, melão e leve toque floral.</p>
+                            </div>
+                        </a>
 
-            <div class="categoria">
-                <div class="titulo-categoria">
-                    <h3>Vinhos</h3>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/chardonnay.jpg" alt="Chardonnay Californiano" />
+                                <h4>Chardonnay Californiano</h4>
+                                <p>Vinho branco encorpado, com notas de baunilha, maçã madura e leve toque amanteigado.</p>
+                            </div>
+                        </a>
+                        <a href="jsp/pagina_item_logado.jsp" class="link">
+                            <div class="card">
+                                <img class="card-image" src="img/syrah.jpg" alt="Syrah Australiano" />
+                                <h4>Syrah Australiano</h4>
+                                <p>Vinho tinto intenso, com aromas de frutas negras, especiarias e taninos firmes.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="carrossel" id="vinhos">
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/carbernet.jpg" alt="Cabernet Sauvignon" />
-                            <h4>Cabernet Sauvignon</h4>
-                            <p>Vinho tinto encorpado com aromas de frutas negras, pimenta e notas de carvalho.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/blanc.jpg" alt="Sauvignon Blanc" />
-                            <h4>Sauvignon Blanc</h4>
-                            <p>Vinho branco refrescante, com notas cítricas, herbáceas e leve mineralidade.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/MalbecArgentino.jpg" alt="Malbec Argentino" />
-                            <h4>Malbec Argentino</h4>
-                            <p>Potente e frutado, com destaque para ameixa, violeta e taninos macios.</p>
-                        </div>
-                    </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/rose.jpg" alt="Rosé Provence" />
-                            <h4>Rosé Provence</h4>
-                            <p>Elegante e seco, com notas de morango, melão e leve toque floral.</p>
-                        </div>
-                    </a>
+            </section>
 
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/chardonnay.jpg" alt="Chardonnay Californiano" />
-                            <h4>Chardonnay Californiano</h4>
-                            <p>Vinho branco encorpado, com notas de baunilha, maçã madura e leve toque amanteigado.</p>
-                        </div>
+            <section class="newsletter">
+                <h3>Conteúdo Exclusivo e Semanal:</h3>
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h1>Newsletter</h1>
+                        <p>Assine nossa newsletter para receber semanalmente dicas, harmonizações e curiosidades sobre cafés, chás e vinhos do mundo inteiro. Conheça novos sabores, tendências e descubra seu próximo favorito.</p>
+                    </div>
+                    <div class="newsletter-form">
+                        <div class="newsletter-img"></div>
+                    </div>
+                </div>
+                <div class="newsletter-login">
+                    <a href="-">
+                        <button>Inscreva-se</button>
                     </a>
-                    <a href="jsp/pagina_item_logado.jsp" class="link">
-                        <div class="card">
-                            <img class="card-image" src="img/syrah.jpg" alt="Syrah Australiano" />
-                            <h4>Syrah Australiano</h4>
-                            <p>Vinho tinto intenso, com aromas de frutas negras, especiarias e taninos firmes.</p>
-                        </div>
-                    </a>
                 </div>
-            </div>
-        </section>
+            </section>
+            <br />
+            <section class="top-em-alta">
+                <h3>Em Alta</h3>
+                <div class="top3">
+                    <div class="top-card">
+                        <h1>Blend Especial do Mês</h1>
+                        <img class="card-image" src="img/A_small_cup_of_coffee.JPG" alt="Blend Especial do Mês" />
+                        <p>Uma combinação exclusiva de grãos da Colômbia e Guatemala, com notas de cacau, canela e leve acidez. Ideal para quem busca uma experiência sensorial única. 
+                            A torra foi cuidadosamente ajustada para preservar os aromas mais sutis, criando um equilíbrio entre doçura e intensidade que surpreende o paladar.</p>
+                    </div>
+                    <div class="top-card">
+                        <h1>Chá Branco Pai Mu Tan</h1>
+                        <img class="card-image" src="img/chapaimutan.jpg" alt="Chá Branco Pai Mu Tan" />
+                        <p>Leve e sofisticado, com sabor floral e toque de pêssego, colhido manualmente na primavera chinesa. 
+                            Esse chá é uma verdadeira joia rara, cuja colheita delicada e processo artesanal resultam em uma infusão que acalma a alma e desperta os sentidos.</p>
+                    </div>
+                    <div class="top-card">
+                        <h1>Pinot Noir da Borgonha</h1>
+                        <img class="card-image" src="img/pinotnoir.jpg" alt="Pinot Noir da Borgonha" />
+                        <p>Vinho elegante com notas de framboesa, cereja e leve presença terrosa. Ótimo para acompanhar pratos leves. 
+                            Sua complexidade aromática e textura aveludada fazem deste Pinot Noir um convite ao prazer em cada gole, perfeito para momentos de celebração ou reflexão.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-englobamento">
+                <div class="titulo-footer">
+                    <a href="index_logado.html">sip & pair.</a>
+                </div>
 
-        <section class="newsletter">
-            <h3>Conteúdo Exclusivo e Semanal:</h3>
-            <div class="newsletter-content">
-                <div class="newsletter-text">
-                    <h1>Newsletter</h1>
-                    <p>Assine nossa newsletter para receber semanalmente dicas, harmonizações e curiosidades sobre cafés, chás e vinhos do mundo inteiro. Conheça novos sabores, tendências e descubra seu próximo favorito.</p>
-                </div>
-                <div class="newsletter-form">
-                    <div class="newsletter-img"></div>
-                </div>
-            </div>
-            <div class="newsletter-login">
-                <button id="subscribeBtn">Inscreva-se</button>
-            </div>
-        </section>
-        <br />
-        <section class="top-em-alta">
-            <h3>Em Alta</h3>
-            <div class="top3">
-                <div class="top-card">
-                    <h1>Blend Especial do Mês</h1>
-                    <img class="card-image" src="img/A_small_cup_of_coffee.JPG" alt="Blend Especial do Mês" />
-                    <p>Uma combinação exclusiva de grãos da Colômbia e Guatemala, com notas de cacau, canela e leve acidez. Ideal para quem busca uma experiência sensorial única. 
-                        A torra foi cuidadosamente ajustada para preservar os aromas mais sutis, criando um equilíbrio entre doçura e intensidade que surpreende o paladar.</p>
-                </div>
-                <div class="top-card">
-                    <h1>Chá Branco Pai Mu Tan</h1>
-                    <img class="card-image" src="img/chapaimutan.jpg" alt="Chá Branco Pai Mu Tan" />
-                    <p>Leve e sofisticado, com sabor floral e toque de pêssego, colhido manualmente na primavera chinesa. 
-                        Esse chá é uma verdadeira joia rara, cuja colheita delicada e processo artesanal resultam em uma infusão que acalma a alma e desperta os sentidos.</p>
-                </div>
-                <div class="top-card">
-                    <h1>Pinot Noir da Borgonha</h1>
-                    <img class="card-image" src="img/pinotnoir.jpg" alt="Pinot Noir da Borgonha" />
-                    <p>Vinho elegante com notas de framboesa, cereja e leve presença terrosa. Ótimo para acompanhar pratos leves. 
-                        Sua complexidade aromática e textura aveludada fazem deste Pinot Noir um convite ao prazer em cada gole, perfeito para momentos especiais.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container-footer">
-            <div class="content-footer">
-                <div class="content-1">
-                    <img src="img/logo.png" alt="Logo" />
-                    <p>A melhor experiência em cafés, chás e vinhos.</p>
-                </div>
-                <div class="content-2">
-                    <h3>Links</h3>
-                    <a href="index_logado.html">Home</a>
-                    <a href="sobre_logado.html">Sobre</a>
-                    <a href="jsp/perfil.jsp">Perfil</a>
-                </div>
-                <div class="content-3">
-                    <h3>Contato</h3>
-                    <p>Email: contato@sipandpair.com</p>
-                    <p>Telefone: (11) 1234-5678</p>
-                    <p>Endereço: Rua Exemplo, 123 - São Paulo, SP</p>
+                <div class="footer">
+                    <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sac@sipandpair.com.br</p>
                 </div>
             </div>
-            <div class="footer-copy">
-                <p>© 2023 sip & pair. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/inscricao.js"></script>
-</body>
+        </footer>
+    </body>
 
 </html>

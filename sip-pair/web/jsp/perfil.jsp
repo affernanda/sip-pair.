@@ -38,8 +38,8 @@
         <a href="../sobre_logado.html" class="active">Sobre Nós</a>
       </nav>
 
-      <a href="perfil.jsp" class="profile-link">
-        Perfil
+      <a href="logout.jsp" class="profile-link">
+        Logout
       </a>
     </header>
         <main>
