@@ -25,7 +25,27 @@
         </header>
         <main class="comentario-container">
             <form action="jsp/comentario.jsp" name="formcomen" onsubmit="return checarNota()">
-                <input type="text" placeholder="Titulo" name="titulo" required />
+                <select name="titulo" id="titulo" required>
+                    <option>Selecione o tópico desejado</option>
+                    <option>Cold Brew</option>
+                    <option>Café Etíope Sidamo</option>
+                    <option>Capuccino Clássico</option>
+                    <option>Mocha Belga</option>
+                    <option>Espresso Italiano</option>
+                    <option>Flat White Australiano</option>
+                    <option>Chá Verde Japonês Sencha</option>
+                    <option>Chá de Camomila</option>
+                    <option>Chá Preto Darjeeling</option>
+                    <option>Chá de Hibisco</option>
+                    <option>Chá Oolong Taiwanês</option>
+                    <option>Chá de Erva-Doce</option>
+                    <option>Cabernet Sauvignon</option>
+                    <option>Sauvignon Blanc</option>
+                    <option>Malbec Argentino</option>
+                    <option>Rosé Provence</option>
+                    <option>Chardonnay Californiano</option>
+                    <option>Syrah Australiano</option>
+                </select>
                 <textarea placeholder="Comentario" name="comentario" required></textarea>
                 <input type="text" placeholder="Nota (1-5)" name="nota" required />
                 <button type="submit">Comentar</button>
@@ -39,7 +59,7 @@
                 </div>
 
                 <div class="footer">
-                    <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loremipsum@outlook.com.br</p>
+                    <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sac@sipandpair.com.br</p>
                 </div>
             </div>
         </footer>
