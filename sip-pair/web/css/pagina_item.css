@@ -249,10 +249,10 @@ footer {
   position: relative;
 }
 .criar-publicacao a {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: auto;
   text-align: center;
-  padding: 12px;
+  padding: 12px 20px;
   background: linear-gradient(145deg, #141414, #676127);
   color: white;
   border: none;
@@ -263,6 +263,13 @@ footer {
   font-size: 1.2rem;
   transition: all 0.4s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none; 
+}
+
+.criar-publicacao{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .criar-publicacao a:hover {
