@@ -1,6 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page import="JavaBeans.Comentario" %>
 <%@ page import="java.util.List" %>
+<%@ page import="JavaBeans.Favorito" %>
 <%
     session = request.getSession(false);
     String nome = "";
@@ -17,9 +19,12 @@
     } else {
         response.sendRedirect(request.getContextPath() + "/login.jsp");
     }
-    
+
     Comentario review = new Comentario();
     List<Comentario> cs = review.listarComentarios(pkuser);
+
+    Favorito favorito = new Favorito();
+    List<Favorito> favoritos = favorito.listarFavoritos(pkuser);
 %>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -31,17 +36,17 @@
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     </head>
     <body>
-    <header class="topbar">
-      <a href="../index_logado.html" class="logo">sip & pair.</a>
+        <header class="topbar">
+            <a href="../index_logado.html" class="logo">sip & pair.</a>
 
-      <nav class="menu">
-        <a href="../sobre_logado.html" class="active">Sobre N�s</a>
-      </nav>
+            <nav class="menu">
+                <a href="../sobre_logado.html" class="active">Sobre Nós</a>
+            </nav>
 
-      <a href="logout.jsp" class="profile-link">
-        Logout
-      </a>
-    </header>
+            <a href="logout.jsp" class="profile-link">
+                Logout
+            </a>
+        </header>
         <main>
             <!-- Perfil -->
             <div class="perfil">
@@ -65,7 +70,15 @@
                 </div>
 
                 <div class="favoritos-grid">
+                    <% for (Favorito f : favoritos) {%>
+                    <div class="favorito-card">
+                        <img src="../img/<%=f.imagem%>" alt="Imagem favorita" style="width: 150px; height: auto;">
+                    </div>
+                    <% } %>
 
+                    <% if (favoritos.isEmpty()) { %>
+                    <p>Você ainda não adicionou nenhum favorito.</p>
+                    <% } %>
                 </div>
             </div>
 
@@ -85,13 +98,23 @@
                         </div>
                         <div class="notas-postagem">
                             <h4><%= c.titulo%></h4>
-                            <p>Nota: <%= c.nota%></p>
+                            <span class="stars">
+                                <%
+                                    int nota = Integer.parseInt(c.nota);
+                                    for (int i = 0; i < nota; i++) {
+                                        out.print("★");
+                                    }
+                                    for (int i = nota; i < 5; i++) {
+                                        out.print("☆");
+                                    }
+                                %>
+                            </span>
                             <p><%= c.comentario%></p>
                         </div>
                     </div>
                     <% } %>
                     <% if (cs.isEmpty()) { %>
-                    <p>Voc� ainda n�o fez nenhum coment�rio.</p>
+                    <p>Você ainda não fez nenhum comentário.</p>
                     <% }%>
                 </div>
             </div>

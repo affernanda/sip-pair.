@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="JavaBeans.Usuario, JavaBeans.Review, java.util.List" %>
+<%@ page import="JavaBeans.Usuario, JavaBeans.Review, JavaBeans.Favorito, java.util.List" %>
 <%
     Usuario user = new Usuario();
     List<Review> reviews = user.listarTodosReviews();
+
+    int pkuser = (int) session.getAttribute("pkuser");
+    Favorito favChecker = new Favorito();
+    favChecker.pkuser = pkuser;
 %>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,9 +42,18 @@
                             <span class="badge">arábico</span>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate leo sed facilisis varius...</p>
                             <h2>
-                                <a href="favoritar.jsp?imagem=/web/img/A_small_cup_of_coffee.JPG">
+                                <%
+                                    favChecker.imagem = "A_small_cup_of_coffee.JPG";
+                                    boolean isFavPreto = favChecker.isFavoritado();
+                                %>
+                                <a href="favoritar.jsp?imagem=A_small_cup_of_coffee.JPG">
+                                    <% if (isFavPreto) { %>
                                     <span style="color: #b02a2a;">♡ Favoritado️</span>
+                                    <% } else { %>
+                                    <span style="color: #ffffff;">♡ Favoritar️</span>
+                                    <% } %>
                                 </a>
+
                             </h2>
                         </div>
                     </div>
@@ -52,9 +65,18 @@
                             <span class="badge">blend</span>
                             <p>Uma mistura suave de café com leite, ideal para o café da manhã...</p>
                             <h2>
-                                <a href="favoritar.jsp?imagem=/web/img/capuccino.jpg">
+                                <%
+                                    favChecker.imagem = "capuccino.jpg";
+                                    boolean isFavCapuccino = favChecker.isFavoritado();
+                                %>
+                                <a href="favoritar.jsp?imagem=capuccino.jpg">
+                                    <% if (isFavCapuccino) { %>
+                                    <span style="color: #b02a2a;">♡ Favoritado️</span>
+                                    <% } else { %>
                                     <span style="color: #ffffff;">♡ Favoritar️</span>
+                                    <% } %>
                                 </a>
+
                             </h2>
                         </div>
                     </div>
@@ -65,9 +87,17 @@
                             <h2>Expresso forte ★★★★</h2>
                             <span class="badge">robusta</span>
                             <p>Para quem gosta de intensidade e sabor marcante...</p>
+                            <%
+                                favChecker.imagem = "Espresso.jpg";
+                                boolean isFavEspresso = favChecker.isFavoritado();
+                            %>
                             <h2>
-                                <a href="favoritar.jsp?imagem=/web/img/Espresso.jpg">
-                                    <span style="color: #b02a2a;">❤️</span>
+                                <a href="favoritar.jsp?imagem=Espresso.jpg">
+                                    <% if (isFavEspresso) { %>
+                                    <span style="color: #b02a2a;">♡ Favoritado️</span>
+                                    <% } else { %>
+                                    <span style="color: #ffffff;">♡ Favoritar️</span>
+                                    <% } %>
                                 </a>
                             </h2>
                         </div>
@@ -96,6 +126,7 @@
                         <img src="../img/A_small_cup_of_coffee.JPG" alt="avatar" />
                         <div>
                             <strong>@<%= r.nomeUsuario%></strong>
+                            <h4><%= r.titulo%></h4>
                             <p><%= r.comentario%></p>
                         </div>
                         <span class="stars">
