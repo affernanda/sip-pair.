@@ -1,7 +1,7 @@
 
 - MER:
   Este MER demonstra as relações entre classes e métodos, apresentando os atributos necessários para interação com o sistema.
-![canva](https://github.com/user-attachments/assets/92ddd2a0-b089-4461-bb60-8c44770e3ce3)
+  ![canva](https://github.com/user-attachments/assets/47f048bd-edeb-4adf-b901-ac8dfab89615)
 
 
 - MIRO:
