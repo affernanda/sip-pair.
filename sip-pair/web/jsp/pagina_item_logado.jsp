@@ -435,7 +435,7 @@
                     <a href="../index_logado.html">sip & pair.</a>
                 </div>
                 <div class="footer">
-                    <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loremipsum@outlook.com.br</p>
+                    <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sac@sipandpair.com.br</p>
                 </div>
             </div>
         </footer>
