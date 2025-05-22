@@ -14,6 +14,10 @@ public class Usuario extends ClasseMaeBD {
     public String senha;
     public String nome;
     public String idade;
+    
+    public Usuario(){
+        super();
+    }
 
     public boolean checarLogin() {
         try {
@@ -155,7 +159,7 @@ public class Usuario extends ClasseMaeBD {
         List<Review> lista = new ArrayList<>();
         try {
             ClasseMaeBD bd = new ClasseMaeBD();
-            bd.sql = "SELECT r.comentario, r.nota, u.nome FROM reviews r JOIN usuario u ON r.pkuser = u.pkuser";
+            bd.sql = "SELECT r.comentario, r.nota, r.titulo, u.nome FROM reviews r JOIN usuario u ON r.pkuser = u.pkuser";
             bd.ps = bd.con.prepareStatement(bd.sql);
             bd.tab = bd.ps.executeQuery();
 
@@ -163,7 +167,9 @@ public class Usuario extends ClasseMaeBD {
                 Review c = new Review();
                 c.comentario = bd.tab.getString("comentario");
                 c.nota = bd.tab.getString("nota");
+                c.titulo = bd.tab.getString("titulo");
                 c.nomeUsuario = bd.tab.getString("nome");
+                
                 lista.add(c);
             }
         } catch (SQLException e) {
