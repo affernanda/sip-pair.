@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Spectral:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #141414;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar {
+  max-width: 1000px;
+  width: 90%;
+  margin: 1rem auto 2.5rem auto;
+  padding: 1rem 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.topbar .logo {
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2.5rem;
+}
+
+.menu a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  border-bottom-color: #a4633b;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.comentario-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+main form select#titulo {
+  appearance: none;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background-color: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+main form select#titulo:focus {
+  border-color: #a4633b;
+  box-shadow: 0 0 0 3px rgba(164, 99, 59, 0.3);
+  outline: none;
+}
+
+main form select#titulo option:first-child {
+  color: #aaa;
+}
+
+main form select#titulo option {
+  color: #fff;
+  background-color: #222;
+}
+
+
+form {
+    background-color: #333;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input, textarea {
+    padding: 10px;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+  padding: 10px;
+  background-color: #a4633b;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #824c2d;
+}
+
+button:focus {
+  outline: none;
+}
+
+footer {
+    background-color: #D9D9D9;
+    color: #111;
+    padding: 15px;
+}
+
+.titulo-footer a {
+    font-weight: bolder;
+    font-size: 200%;
+    text-decoration: none;
+    color: #111;
+}
+
+.footer-englobamento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: relative;
+}

@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #141414;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.7;
+  padding: 1.5rem 0;
+}
+
+
+.topbar {
+  max-width: 1000px;
+  width: 90%;
+  margin: 1rem auto 2.5rem auto;
+  padding: 1rem 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.topbar .logo {
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2.5rem;
+}
+
+.menu a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  border-bottom-color: #a4633b;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+main {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    padding: 20%;
+    flex: 1;
+}
+
+.main p {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+/*
+  Perfil
+*/
+
+.perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: 0 5%;
+    flex-wrap: wrap;
+}
+
+.perfil-descricao {
+    text-align: justify;
+    max-width: 500px;
+    color: white;
+    font-size: 80%;
+}
+
+.perfil-descricao > p {
+    margin: 0;
+}
+
+.perfil-foto {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1%;
+}
+
+.perfil-foto > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 3%;
+    display: block;
+}
+
+.perfil-foto > p {
+    font-size: 120%;
+    padding-bottom: 20%;
+}
+
+/*
+
+    Favoritos e Notas
+
+*/
+
+.categoria {
+    background-color: #141414;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05), 0 8px 24px rgba(255, 255, 255, 0.1);
+}
+
+.titulo-categoria {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.titulo-categoria img {
+    width: 32px;
+    height: 32px;
+}
+
+.titulo-categoria h3 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: white;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 200px;
+    max-height: 100px;
+    box-shadow: 0 2px 12px rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.categoria p {
+    color: #aaa;
+    font-size: 1rem;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+}
+
+
+.notas {
+    padding: 2rem;
+    margin-top: 0;
+}
+
+.notas-titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+.notas-titulo img {
+    max-width: 30px;
+}
+
+.notas-titulo h3 {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.notas-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0;
+    border-radius: 0;
+}
+
+.notas-card {
+    width: 450px;
+    background-color: #222;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    word-wrap: break-word;
+    gap: 0.5rem;
+}
+
+.notas-card img {
+    width: 30px;
+    height: 30px;
+}
+
+.notas-card p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.usuario-notas{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px;
+    align-items: center;
+}
+
+.usuario-notas p{
+    font-size: larger;
+}
+
+.usuario-notas img{
+    width: 17%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 100%;
+    display: block;
+}
+
+.notas-postagem p{
+    font-size: large;
+    margin: 0.25rem 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+footer{
+    background-color: #D9D9D9;
+    color: #111;
+    padding:15px;
+}
+
+.titulo-footer a{
+    font-weight: bolder;
+    font-size: 200%;
+    text-decoration: none;
+    color: #111;
+}
+
+.footer-englobamento{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: relative;
+}
+
+.stars {
+  font-size: 18px;
+  color: gold;
+}
+
+.favoritos-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.favorito-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
