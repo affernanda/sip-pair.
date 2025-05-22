@@ -1,7 +1,8 @@
 
 - MER:
-  Este MER demonstra as relações entre classes e métodos, apresentando os atributos necessários para interagir para com.
-![image](https://github.com/user-attachments/assets/14256aca-983a-4168-830b-2744256f47c7)
+  Este MER demonstra as relações entre classes e métodos, apresentando os atributos necessários para interação com o sistema.
+![canva](https://github.com/user-attachments/assets/92ddd2a0-b089-4461-bb60-8c44770e3ce3)
+
 
 - MIRO:
   Este MIRO apresenta as imagens de inspiração para desenvolvimento do front-end.
