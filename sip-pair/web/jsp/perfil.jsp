@@ -63,20 +63,20 @@
             </div>  
 
             <!-- Favoritos -->
-            <div class="favoritos">
-                <div class="favoritos-titulo">
-                    <img src="img/coracao-favoritos.png" alt="">
-                    <h2>favoritos</h2>
+            <div class="categoria">
+                <div class="titulo-categoria">
+                    <img src="../img/coracao-favoritos.png" alt="">
+                    <h3 style="color: white">favoritos</h3>
                 </div>
 
-                <div class="favoritos-grid">
-                    <% for (Favorito f : favoritos) {%>
-                    <div class="favorito-card">
-                        <img src="../img/<%=f.imagem%>" alt="Imagem favorita" style="width: 150px; height: auto;">
-                    </div>
-                    <% } %>
-
-                    <% if (favoritos.isEmpty()) { %>
+                <div class="link">
+                    <% if (!favoritos.isEmpty()) {
+                            for (Favorito f : favoritos) {%>
+                    <a href="pagina_item_logado.jsp" class="card">
+                        <img src="../img/<%= f.imagem%>" alt="Imagem favorita">
+                    </a>
+                    <% }
+                    } else { %>
                     <p>Você ainda não adicionou nenhum favorito.</p>
                     <% } %>
                 </div>
