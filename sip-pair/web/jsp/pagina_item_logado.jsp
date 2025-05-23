@@ -141,8 +141,8 @@
                             </p>
                             <div class="combina-itens">
                                 <div class="item">
-                                    <img src="../img/croissant-amanteigado.jpg" alt="Croissant amanteigado">
-                                    <p>Croissant amanteigado</p>
+                                    <img src="../img/croissant-amanteigado.jpg" alt="Croissant">
+                                    <p>Croissant</p>
                                 </div>
                                 <div class="item">
                                     <img src="../img/biscoito-canela.jpg" alt="Biscoito de canela">
@@ -186,7 +186,7 @@
                                 </div>
                                 <div class="item">
                                     <img src="../img/frutas-secas.jpg" alt="Frutas secas">
-                                    <p>Frutas secas (damasco, figo)</p>
+                                    <p>Frutas secas</p>
                                 </div>
                                 <div class="item">
                                     <img src="../img/bolo-especiarias.jpg" alt="Bolo de especiarias">
@@ -270,7 +270,7 @@
                                 </div>
                                 <div class="item">
                                     <img src="../img/pao-artesanal-manteiga.jpg" alt="Pão artesanal com manteiga">
-                                    <p>Pão artesanal com manteiga</p>
+                                    <p>Pão artesanal e manteiga</p>
                                 </div>
                             </div>
                         </div>
