@@ -29,11 +29,24 @@ body {
     position: relative;
 }
 
-.topbar .logo {
-    font-weight: 700;
-    font-size: 1.9rem;
+.topbar a {
+    font-weight: 600;
+    font-size: 1.1rem;
     color: #fff;
     text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.topbar a:hover {
+    letter-spacing: 1px;
+    border-bottom-color: #a4633b;
+}
+
+.topbar .logo {
+    font-size: 1.9rem;
+    font-weight: 700;
 }
 
 .menu {
@@ -52,11 +65,6 @@ body {
     padding-bottom: 3px;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s ease;
-}
-
-.menu a:hover,
-.menu a.active {
-    border-bottom-color: #a4633b;
 }
 
 .profile-link {

@@ -18,56 +18,65 @@ body {
 }
 
 .topbar {
-  max-width: 1000px;
-  width: 90%;
-  margin: 1rem auto 2.5rem auto;
-  padding: 1rem 0;
-  background: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+    max-width: 1000px;
+    width: 90%;
+    margin: 1rem auto 2.5rem auto;
+    padding: 1rem 0;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.topbar a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.topbar a:hover {
+    letter-spacing: 1px;
+    border-bottom-color: #a4633b;
 }
 
 .topbar .logo {
-  font-weight: 700;
-  font-size: 1.9rem;
-  color: #fff;
-  text-decoration: none;
+    font-size: 1.9rem;
+    font-weight: 700;
 }
 
 .menu {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2.5rem;
 }
 
 .menu a {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #fff;
-  text-decoration: none;
-  padding-bottom: 3px;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.menu a:hover,
-.menu a.active {
-  border-bottom-color: #a4633b;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
 }
 
 .profile-link {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: #fff;
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #fff;
+    text-decoration: none;
 }
+
 
 .hero {
   padding: 9rem 7% 7rem;
@@ -75,7 +84,7 @@ body {
   background: #000;
   color: #fff;
   margin-bottom: 3.5rem;
-  background-image: url('01.jpg');
+  background-image: url('../img/01.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
