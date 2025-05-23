@@ -47,6 +47,8 @@
                 Logout
             </a>
         </header>
+        <section class="hero-section">
+        </section>
         <main>
             <!-- Perfil -->
             <div class="perfil">
