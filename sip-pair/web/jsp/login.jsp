@@ -18,8 +18,6 @@
 
         response.sendRedirect(request.getContextPath() + "/index_logado.html");
     } else {
-        // Se falhar, exibe mensagem de erro
-        out.println("<script>alert('Email ou senha incorretos!')</script>");
-        response.sendRedirect(request.getContextPath() + "/login.html");
+        out.println("<script>alert('Email ou senha incorretos!'); window.location.href='../login.html';</script>");
     }
 %>
