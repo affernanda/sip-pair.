@@ -49,6 +49,9 @@
         </header>
         <section class="hero-section">
         </section>
+        <section class="life">
+        <p>life is short<br />have a sip</p>
+        </section>
         <main>
             <!-- Perfil -->
             <div class="perfil">
@@ -60,7 +63,6 @@
                 <div class="perfil-descricao">
                     <h1>@<%= nome%></h1>
                     <p>Email: <%= email%></p>
-                    <p>Bem-vindo ao seu perfil personalizado!</p>
                 </div>
             </div>  
 
@@ -128,7 +130,7 @@
                     <a href="../index_logado.html">sip & pair.</a>
                 </div>
                 <div class="footer">
-                    <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loremipsum@outlook.com.br</p>
+                    <p>Fale Conosco &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sac@sipandpair.com.br</p>
                 </div>
             </div>
         </footer>
